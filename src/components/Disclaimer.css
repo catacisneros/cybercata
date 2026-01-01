@@ -1,0 +1,23 @@
+/* Disclaimer section */
+.disclaimer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.disclaimer-text {
+  font-size: 0.8125rem;
+  color: #b0b0b0;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 48ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .disclaimer {
+    padding: 2.5rem 0;
+  }
+}
+

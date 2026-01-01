@@ -1,0 +1,42 @@
+/* Responsible Use section */
+.responsible-use {
+  padding: 2rem 0;
+}
+
+.guidelines-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.guideline-item {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #d0d0d0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.guideline-item::before {
+  content: '✓ ';
+  color: #00d4ff;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .responsible-use {
+    padding: 3rem 0;
+  }
+
+  .guidelines-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
