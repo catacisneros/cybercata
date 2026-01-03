@@ -2,9 +2,8 @@ import './ResponsibleUse.css'
 
 function ResponsibleUse() {
   const guidelines = [
-    'No hackea cuentas',
-    'No accede a información privada',
-    'Usa fuentes públicas',
+    'No hackees cuentas ni robes información',
+    'No accedas ni compartas información privada',
     'Respeta leyes y privacidad',
   ]
 
