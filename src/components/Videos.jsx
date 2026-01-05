@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { SPOKEO_AFFILIATE_URL, TIKTOK_VIDEOS, SUNSHINE_LAWS_URL } from '../constants'
+import { SPOKEO_AFFILIATE_URL } from '../constants'
 import './Videos.css'
 
 function Videos() {
@@ -22,11 +22,6 @@ function Videos() {
   const handleVerAnalisis = () => {
     console.log('click_ver_analisis_automatico')
     window.open(SPOKEO_AFFILIATE_URL, '_blank', 'noopener,noreferrer')
-  }
-
-  const handleVerRecursosOficiales = () => {
-    console.log('click_ver_recursos_oficiales')
-    window.open(SUNSHINE_LAWS_URL, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -120,87 +115,6 @@ function Videos() {
           </div>
         </div>
 
-        {/* Video 2: Sunshine Laws */}
-        <div className="video-item">
-          <blockquote
-            className="tiktok-embed"
-            cite="https://www.tiktok.com/@catacisneros/video/7590114001485417759"
-            data-video-id="7590114001485417759"
-            style={{ maxWidth: '605px', minWidth: '325px' }}
-          >
-            <section>
-              <a
-                target="_blank"
-                title="@catacisneros"
-                href="https://www.tiktok.com/@catacisneros?refer=embed"
-                rel="noopener noreferrer"
-              >
-                @catacisneros
-              </a>
-              {' '}
-              Que son los{' '}
-              <a
-                title="sunshinelaws"
-                target="_blank"
-                href="https://www.tiktok.com/tag/sunshinelaws?refer=embed"
-                rel="noopener noreferrer"
-              >
-                #SunshineLaws
-              </a>
-              {' '}☀️? Te lo explico en menos de 30 segundos⏳posteando drafts desde el hospital 🤒 tengo pendiente hacer el video explicando cómo hacer{' '}
-              <a
-                title="osint"
-                target="_blank"
-                href="https://www.tiktok.com/tag/osint?refer=embed"
-                rel="noopener noreferrer"
-              >
-                #OSINT
-              </a>
-              {' '}y que herramientas pueden usarse 🌐🔐{' '}
-              <a
-                title="ciberseguridad"
-                target="_blank"
-                href="https://www.tiktok.com/tag/ciberseguridad?refer=embed"
-                rel="noopener noreferrer"
-              >
-                #ciberseguridad
-              </a>
-              {' '}
-              <a
-                title="hacker"
-                target="_blank"
-                href="https://www.tiktok.com/tag/hacker?refer=embed"
-                rel="noopener noreferrer"
-              >
-                #hacker
-              </a>
-              {' '}
-              <a
-                title="florida"
-                target="_blank"
-                href="https://www.tiktok.com/tag/florida?refer=embed"
-                rel="noopener noreferrer"
-              >
-                #florida
-              </a>
-              {' '}
-              <a
-                target="_blank"
-                title="♬ Carmen Habanera - Abaco Tango Club"
-                href="https://www.tiktok.com/music/Carmen-Habanera-5000000001001822198?refer=embed"
-                rel="noopener noreferrer"
-              >
-                ♬ Carmen Habanera - Abaco Tango Club
-              </a>
-            </section>
-          </blockquote>
-
-          <div className="video-context">
-            <button className="btn btn-secondary-small" onClick={handleVerRecursosOficiales}>
-              Ver recursos oficiales
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   )

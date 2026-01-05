@@ -1,9 +1,14 @@
-/* Single Video section */
-.video-single {
-  padding: 2rem 0;
+/* Video Single Item */
+.video-single-item {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.video-single .tiktok-embed {
+.video-single-item:last-child {
+  margin-bottom: 0;
+}
+
+.tiktok-embed {
   margin: 0 auto;
   display: block;
   width: 100%;
@@ -11,8 +16,7 @@
 }
 
 @media (min-width: 768px) {
-  .video-single {
-    padding: 3rem 0;
+  .video-single-item {
+    margin-bottom: 2.5rem;
   }
 }
-
