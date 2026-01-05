@@ -6,12 +6,13 @@
   "type": "module",
   "homepage": "https://catacisneros.github.io/cybercata",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force --clearScreen false",
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview --port 4173",
+    "serve": "vite preview --port 4173 --host"
   },
   "dependencies": {
     "react": "^18.2.0",

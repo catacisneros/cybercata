@@ -1,8 +1,11 @@
-
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 
 export default defineConfig({
   plugins: [react()],
-  base: "/cybercata/"
+  server: {
+    port: 8888,
+    host: 'localhost',
+    strictPort: true
+  }
 })

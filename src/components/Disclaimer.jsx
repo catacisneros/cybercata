@@ -5,7 +5,7 @@ function Disclaimer() {
     <section className="disclaimer">
       <div className="container">
         <p className="disclaimer-text">
-          Este sitio es educativo. Algunas herramientas usan información públicamente disponible.
+          Este sitio lo programe yo (cata) en mi tiempo libre y es con fines educativos :))))
           Algunos enlaces pueden ser enlaces de afiliado, sin costo adicional para ti.
           Úsalo de forma legal y responsable.
         </p>

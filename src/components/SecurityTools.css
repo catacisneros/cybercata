@@ -1,0 +1,56 @@
+/* Security Tools section */
+.security-tools {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.security-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.security-subtitle {
+  font-size: 1rem;
+  color: #d0d0d0;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+  max-width: 32ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.security-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .security-tools {
+    padding: 3rem 0;
+  }
+
+  .security-title {
+    font-size: 2.5rem;
+  }
+
+  .security-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .security-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .security-buttons .btn {
+    flex: 0 1 auto;
+    min-width: 180px;
+  }
+}
+

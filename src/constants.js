@@ -4,7 +4,7 @@ export const SPOKEO_AFFILIATE_URL = "https://www.spokeo.com/people-search?g=name
 // Links sociales
 export const SOCIAL_LINKS = [
   { name: 'TikTok', url: 'https://www.tiktok.com/@catacisneros' },
-  { name: 'YouTube', url: 'https://www.youtube.com/@catacis' },
+  { name: 'YouTube', url: 'https://www.youtube.com/@cybercata' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/catalinacisneros/' },
   { name: 'GitHub', url: 'https://github.com/catacisneros' },
   { name: 'Instagram', url: 'https://www.instagram.com/cata.cisneros/' },
@@ -18,4 +18,8 @@ export const TIKTOK_VIDEOS = {
 
 // URL de recursos oficiales de Sunshine Laws
 export const SUNSHINE_LAWS_URL = 'https://www.myfloridalegal.com/open-government/the-quotsunshinequot-law';
+
+// URLs de herramientas de seguridad
+export const VPN_AFFILIATE_URL = "https://go.nordvpn.net/aff_c?offer_id=612&aff_id=138174&url_id=14830";
+export const PASSWORD_MANAGER_AFFILIATE_URL = "https://go.nordpass.io/aff_c?offer_id=488&aff_id=138174&url_id=9356";
 

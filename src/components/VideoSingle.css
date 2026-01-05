@@ -1,0 +1,18 @@
+/* Single Video section */
+.video-single {
+  padding: 2rem 0;
+}
+
+.video-single .tiktok-embed {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 605px;
+}
+
+@media (min-width: 768px) {
+  .video-single {
+    padding: 3rem 0;
+  }
+}
+
