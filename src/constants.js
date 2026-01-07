@@ -1,7 +1,7 @@
 // Profile information
 export const PROFILE = {
   username: 'CyberCata',
-  image: 'src/components/Cata_Pic.JPG', 
+  image:`${import.meta.env.BASE_URL}Cata_Pic.JPG`,
 };
 
 // Original social media links (for icons below username)
