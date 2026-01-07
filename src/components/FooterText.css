@@ -1,0 +1,28 @@
+.footer-text {
+  margin-top: 2rem;
+  padding: 1.25rem 1rem 2rem;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-message {
+  margin: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .footer-message {
+    font-size: 1rem;
+  }
+}
+
+

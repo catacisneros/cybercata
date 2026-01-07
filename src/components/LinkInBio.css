@@ -1,0 +1,146 @@
+.link-in-bio {
+  min-height: 100vh;
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.profile-image-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #00d4ff;
+  object-fit: cover;
+}
+
+.profile-username {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.social-icons-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #00d4ff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 1.25rem;
+}
+
+.social-icon-link:hover {
+  color: #0099ff;
+  transform: translateY(-2px);
+}
+
+.links-section {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.affiliate-link-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(0, 212, 255, 0.15);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  width: 100%;
+  min-height: 64px;
+}
+
+.affiliate-link-button:hover {
+  background: rgba(0, 212, 255, 0.25);
+  border-color: #00d4ff;
+  transform: translateY(-2px);
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #00d4ff;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.button-content {
+  flex: 1;
+  text-align: left;
+}
+
+.button-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #00d4ff;
+  margin-bottom: 0.25rem;
+}
+
+.button-subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .link-in-bio {
+    padding: 3rem 1.25rem;
+  }
+
+  .profile-username {
+    font-size: 2rem;
+  }
+
+  .affiliate-link-button {
+    padding: 1.25rem 1.5rem;
+    min-height: 72px;
+  }
+
+  .button-title {
+    font-size: 1.25rem;
+  }
+
+  .button-subtitle {
+    font-size: 0.9375rem;
+  }
+}
+
