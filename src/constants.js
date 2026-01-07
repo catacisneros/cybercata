@@ -20,7 +20,7 @@ export const VPN_AFFILIATE_URL = "https://go.nordvpn.net/aff_c?offer_id=612&aff_
 export const PASSWORD_MANAGER_AFFILIATE_URL = "https://go.nordpass.io/aff_c?offer_id=488&aff_id=138174&url_id=9356";
 
 // Footer text (edítalo libremente)
-export const FOOTER_TEXT = "Este sitio lo programe yo (cata) en mi tiempo libre y es con fines educativos :)))) Algunos enlaces pueden ser de afiliado, sin costo adicional para ti. Úsalo de forma legal y responsable";
+export const FOOTER_TEXT = "Este sitio lo programe yo (cata) en mi tiempo libre y es con fines educativos ☺ Algunos enlaces pueden ser de afiliado, sin costo adicional para ti. Úsalo de forma legal y responsable";
 
 // Affiliate links for buttons
 export const AFFILIATE_LINKS = [
