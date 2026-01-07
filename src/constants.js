@@ -1,7 +1,8 @@
+import cataPic from "./components/Cata_Pic.JPG"
 // Profile information
 export const PROFILE = {
   username: 'CyberCata',
-  image: 'src/components/Cata_Pic.jpg', 
+  image: cataPic, 
 };
 
 // Original social media links (for icons below username)
