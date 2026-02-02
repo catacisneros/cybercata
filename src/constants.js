@@ -1,9 +1,12 @@
 // Profile information
 export const PROFILE = {
   username: 'CyberCata',
-  subtitle: 'Ciberseguridad & Networking',
-  subtitle2: 'Sigueme en redes sociales',
-  image:`${import.meta.env.BASE_URL}Cata_Pic.JPG`,
+  subtitle: 'Ciberseguridad y redes en español',
+  socialProof: [
+    '+50k aprendiendo ciberseguridad conmigo',
+  ],
+  socialCta: 'Encuéntrame aquí',
+  image: `${import.meta.env.BASE_URL}Cata_Pic.JPG`,
 };
 
 // Original social media links (for icons below username)
@@ -48,8 +51,16 @@ export const AFFILIATE_LINKS = [
     platform: 'Cybersecurity Portfolio',
     icon: 'FaGlobe',
     title: 'My Portfolio',
-    subtitle: 'Quien soy. Proyectos, experiencia, certificaciones, etc.',
+    subtitle: 'Quien soy: proyectos, experiencia, certificaciones, etc.',
     url: 'https://catacisneros.github.io',
   },
+];
+
+// Footer text (add as many lines as you want)
+export const FOOTER_LINES = [
+  'Algunos enlaces son afiliados',
+  '  ',
+  '© 2026 CyberCata.',
+  'Built by Cata',
 ];
 

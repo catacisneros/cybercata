@@ -1,5 +1,5 @@
 import { FaTiktok, FaInstagram, FaLinkedin, FaGithub, FaYoutube, FaSearch, FaShieldAlt, FaLock, FaGlobe } from 'react-icons/fa'
-import { PROFILE, SOCIAL_LINKS, AFFILIATE_LINKS } from '../constants'
+import { PROFILE, SOCIAL_LINKS, AFFILIATE_LINKS, FOOTER_LINES } from '../constants'
 import './LinkInBio.css'
 
 function LinkInBio() {
@@ -35,8 +35,13 @@ function LinkInBio() {
         {PROFILE.subtitle && (
           <p className="profile-subtitle">{PROFILE.subtitle}</p>
         )}
-        {PROFILE.subtitle2 && (
-          <p className="profile-subtitle profile-subtitle-2">{PROFILE.subtitle2}</p>
+        {PROFILE.socialProof && PROFILE.socialProof.length > 0 && (
+          <p className="profile-social-proof">
+            {PROFILE.socialProof.join(' · ')}
+          </p>
+        )}
+        {PROFILE.socialCta && (
+          <p className="profile-social-cta">{PROFILE.socialCta}</p>
         )}
         <div className="social-icons-row">
           {SOCIAL_LINKS.map((social, index) => {
@@ -81,6 +86,18 @@ function LinkInBio() {
           )
         })}
       </div>
+
+      {FOOTER_LINES && FOOTER_LINES.some(line => line.trim()) && (
+        <footer className="link-in-bio-footer">
+          {FOOTER_LINES.map((line, index) =>
+            line.trim() === '' ? (
+              <p key={index} className="link-in-bio-footer-spacer" aria-hidden="true" />
+            ) : (
+              <p key={index} className="link-in-bio-footer-text">{line}</p>
+            )
+          )}
+        </footer>
+      )}
     </div>
   )
 }
