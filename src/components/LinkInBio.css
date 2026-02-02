@@ -36,6 +36,27 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.profile-subtitle {
+  font-size: 0.9375rem;
+  color: rgba(0, 212, 255, 0.85);
+  font-weight: 400;
+  margin: 0 0 0.25rem;
+  line-height: 1.4;
+
+}
+
+.profile-subtitle-2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.75);
+  ine-height: 1.4;
 }
 
 .social-icons-row {

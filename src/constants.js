@@ -1,6 +1,8 @@
 // Profile information
 export const PROFILE = {
   username: 'CyberCata',
+  subtitle: 'Ciberseguridad & Networking',
+  subtitle2: 'Sigueme en redes sociales',
   image:`${import.meta.env.BASE_URL}Cata_Pic.JPG`,
 };
 
@@ -43,11 +45,11 @@ export const AFFILIATE_LINKS = [
     url: PASSWORD_MANAGER_AFFILIATE_URL,
   },
   {
-    platform: 'TikTok OSI Model',
-    icon: 'FaTiktok',
-    title: 'Redes y Ciberseguridad',
-    subtitle: 'Sígueme en TikTok donde subo videos sobre redes y ciberseguridad',
-    url: 'https://www.tiktok.com/@catacisneros/playlist/Modelo%20OSI%20🌐-7600289444822403870',
+    platform: 'Cybersecurity Portfolio',
+    icon: 'FaGlobe',
+    title: 'My Portfolio',
+    subtitle: 'Quien soy. Proyectos, experiencia, certificaciones, etc.',
+    url: 'https://catacisneros.github.io',
   },
 ];
 

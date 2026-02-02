@@ -18,7 +18,7 @@ function LinkInBio() {
     FaSearch,
     FaShieldAlt,
     FaLock,
-    FaTiktok,
+    FaGlobe,
   }
 
   return (
@@ -32,6 +32,12 @@ function LinkInBio() {
           />
         </div>
         <h1 className="profile-username">{PROFILE.username}</h1>
+        {PROFILE.subtitle && (
+          <p className="profile-subtitle">{PROFILE.subtitle}</p>
+        )}
+        {PROFILE.subtitle2 && (
+          <p className="profile-subtitle profile-subtitle-2">{PROFILE.subtitle2}</p>
+        )}
         <div className="social-icons-row">
           {SOCIAL_LINKS.map((social, index) => {
             const IconComponent = iconMap[social.name]
