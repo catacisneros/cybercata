@@ -60,7 +60,7 @@ export const AFFILIATE_LINKS = [
 export const FOOTER_LINES = [
   'Algunos enlaces son afiliados',
   '  ',
-  '© 2026 CyberCata.',
+  '© 2026 CyberCata',
   'Built by Cata',
 ];
 
