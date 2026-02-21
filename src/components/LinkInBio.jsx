@@ -74,7 +74,11 @@ function LinkInBio() {
               className="affiliate-link-button"
             >
               <div className="button-icon">
-                <IconComponent />
+                {link.logo ? (
+                  <img src={link.logo} alt="" className="button-logo" />
+                ) : IconComponent ? (
+                  <IconComponent />
+                ) : null}
               </div>
               <div className="button-content">
                 <div className="button-title">{link.title}</div>
