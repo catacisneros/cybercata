@@ -50,7 +50,7 @@ export const AFFILIATE_LINKS = [
   {
     platform: 'Cybersecurity Portfolio',
     icon: 'FaGlobe',
-    title: 'My Portfolio',
+    title: 'Mi Portafolio',
     subtitle: 'Quién soy: proyectos, experiencia, certificaciones, etc.',
     url: 'https://catacisneros.github.io',
   },
