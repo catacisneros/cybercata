@@ -36,8 +36,8 @@ export const AFFILIATE_LINKS = [
   {
     platform: 'NordVPN',
     icon: 'FaShieldAlt',
-    title: 'Protege tu privacidad',
-    subtitle: 'Cifra tu conexión y evita rastreos en línea con una VPN',
+    title: 'Consigue NordVPN',
+    subtitle: 'Protege tu vida digital, evita las ciber amenazas',
     url: VPN_AFFILIATE_URL,
   },
   {
