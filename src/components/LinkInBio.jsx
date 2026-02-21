@@ -72,8 +72,9 @@ function LinkInBio() {
               target="_blank"
               rel="noopener noreferrer"
               className="affiliate-link-button"
+              data-platform={link.platform}
             >
-              <div className="button-icon">
+              <div className={`button-icon${link.logo ? ' button-icon--logo' : ''}`}>
                 {link.logo ? (
                   <img src={link.logo} alt="" className="button-logo" />
                 ) : IconComponent ? (
