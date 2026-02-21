@@ -28,14 +28,14 @@ export const PASSWORD_MANAGER_AFFILIATE_URL = "https://go.nordpass.io/aff_c?offe
 export const AFFILIATE_LINKS = [
   {
     platform: 'Spokeo',
-    icon: 'FaSearch',
+    logo: `${import.meta.env.BASE_URL}touch-icon_512.6eb08158.png`,
     title: 'Revisa tu huella digital',
     subtitle: 'Descubre qué información tuya es pública',
     url: SPOKEO_AFFILIATE_URL,
   },
   {
     platform: 'NordVPN',
-    logo: `${import.meta.env.BASE_URL}NordVPN_Logo_RGB_Secondary_Blue_Black.png`,
+    logo: `${import.meta.env.BASE_URL}NordVPN_Logo_RGB_Secondary_White.png`,
     title: 'Consigue NordVPN',
     subtitle: 'Protege tu vida digital, evita las ciber amenazas',
     url: VPN_AFFILIATE_URL,
