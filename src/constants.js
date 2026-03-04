@@ -41,8 +41,7 @@ export const AFFILIATE_LINKS = [
     url: VPN_AFFILIATE_URL,
   },
   {
-    platform: 'NordPass',
-    icon: '',
+    logo: `${import.meta.env.BASE_URL}NordVPN_Logo_RGB_Secondary_White.png`,
     title: 'Asegura tus accesos',
     subtitle: 'Guarda y genera contraseñas seguras',
     url: PASSWORD_MANAGER_AFFILIATE_URL,
