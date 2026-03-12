@@ -1,7 +1,7 @@
 // Profile information
 export const PROFILE = {
   username: 'CyberCata',
-  subtitle: 'Ciberseguridad y redes en español',
+  subtitle: 'Ciberseguridad, hacking y redes',
   socialProof: [
     '+70k aprendiendo ciberseguridad conmigo',
   ],
@@ -49,8 +49,8 @@ export const AFFILIATE_LINKS = [
   {
     platform: 'Cybersecurity Portfolio',
     icon: 'FaGlobe',
-    title: 'Mi Portafolio',
-    subtitle: 'Quién soy: proyectos, experiencia, certificaciones, etc.',
+    title: 'My Portfolio',
+    subtitle: 'My projects, experience, certifications, etc.',
     url: 'https://catacisneros.github.io',
   },
 ];
