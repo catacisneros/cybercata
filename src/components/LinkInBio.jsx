@@ -1,4 +1,4 @@
-import { FaTiktok, FaInstagram, FaLinkedin, FaGithub, FaYoutube, FaSearch, FaShieldAlt, FaLock, FaGlobe } from 'react-icons/fa'
+import { FaTiktok, FaInstagram, FaLinkedin, FaGithub, FaYoutube, FaSearch, FaShieldAlt, FaLock, FaGlobe, FaDiscord } from 'react-icons/fa'
 import { PROFILE, SOCIAL_LINKS, AFFILIATE_LINKS, FOOTER_LINES } from '../constants'
 import './LinkInBio.css'
 
@@ -11,6 +11,7 @@ function LinkInBio() {
     GitHub: FaGithub,
     Instagram: FaInstagram,
     Website: FaGlobe,
+    Discord: FaDiscord,
   }
 
   // Mapeo de iconos para los botones de productos
@@ -19,6 +20,7 @@ function LinkInBio() {
     FaShieldAlt,
     FaLock,
     FaGlobe,
+    FaDiscord,
   }
 
   return (
@@ -46,17 +48,32 @@ function LinkInBio() {
         <div className="social-icons-row">
           {SOCIAL_LINKS.map((social, index) => {
             const IconComponent = iconMap[social.name]
+            if (!IconComponent) return null
+            const hasUrl = typeof social.url === 'string' && social.url.trim() !== ''
+            const iconEl = <IconComponent />
+            if (hasUrl) {
+              return (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon-link"
+                  aria-label={social.name}
+                >
+                  {iconEl}
+                </a>
+              )
+            }
             return (
-              <a
+              <span
                 key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon-link"
+                className="social-icon-link social-icon-link--disabled"
                 aria-label={social.name}
+                aria-disabled="true"
               >
-                <IconComponent />
-              </a>
+                {iconEl}
+              </span>
             )
           })}
         </div>
@@ -65,15 +82,10 @@ function LinkInBio() {
       <div className="links-section">
         {AFFILIATE_LINKS.map((link, index) => {
           const IconComponent = buttonIconMap[link.icon]
-          return (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="affiliate-link-button"
-              data-platform={link.platform}
-            >
+          const hasUrl = typeof link.url === 'string' && link.url.trim() !== ''
+
+          const buttonInner = (
+            <>
               <div className={`button-icon${link.logo ? ' button-icon--logo' : ''}`}>
                 {link.logo ? (
                   <img src={link.logo} alt="" className="button-logo" />
@@ -87,7 +99,34 @@ function LinkInBio() {
                   <div className="button-subtitle">{link.subtitle}</div>
                 )}
               </div>
-            </a>
+            </>
+          )
+
+          if (hasUrl) {
+            return (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="affiliate-link-button"
+                data-platform={link.platform}
+              >
+                {buttonInner}
+              </a>
+            )
+          }
+
+          // Si la URL está en blanco, mantenemos el estilo pero como tarjeta no clickeable.
+          return (
+            <div
+              key={index}
+              className="affiliate-link-button"
+              data-platform={link.platform}
+              aria-disabled="true"
+            >
+              {buttonInner}
+            </div>
           )
         })}
       </div>

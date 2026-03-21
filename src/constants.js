@@ -11,11 +11,12 @@ export const PROFILE = {
 
 // Original social media links (for icons below username)
 export const SOCIAL_LINKS = [
+  { name: 'Discord', url: 'https://discord.gg/V3C3CC9b' },
   { name: 'TikTok', url: 'https://www.tiktok.com/@catacisneros' },
+  { name: 'Instagram', url: 'https://www.instagram.com/cyber.cata/' },
   { name: 'YouTube', url: 'https://www.youtube.com/@cybercata' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/catalinacisneros/' },
   { name: 'GitHub', url: 'https://github.com/catacisneros' },
-  { name: 'Instagram', url: 'https://www.instagram.com/cyber.cata/' },
   { name: 'Website', url: 'https://catacisneros.github.io' },
 ];
 
@@ -26,6 +27,13 @@ export const PASSWORD_MANAGER_AFFILIATE_URL = "https://go.nordpass.io/aff_c?offe
 
 // Link cards (icon + title + subtitle)
 export const AFFILIATE_LINKS = [
+  {
+    platform: 'Discord',
+    icon: 'FaDiscord',
+    title: 'Hazte parte de la comunidad',
+    subtitle: 'Accede a las guías digitales, recursos exclusivos y conecta con la comunidad',
+    url: 'https://discord.gg/V3C3CC9b',
+  },
   {
     platform: 'Spokeo',
     logo: `${import.meta.env.BASE_URL}touch-icon_512.6eb08158.png`,
@@ -53,6 +61,7 @@ export const AFFILIATE_LINKS = [
     subtitle: 'My projects, experience, certifications, etc.',
     url: 'https://catacisneros.github.io',
   },
+
 ];
 
 // Footer text (add as many lines as you want)
