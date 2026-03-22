@@ -15,7 +15,6 @@ export const SOCIAL_LINKS = [
   { name: 'TikTok', url: 'https://www.tiktok.com/@catacisneros' },
   { name: 'Instagram', url: 'https://www.instagram.com/cyber.cata/' },
   { name: 'YouTube', url: 'https://www.youtube.com/@cybercata' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/catalinacisneros/' },
   { name: 'GitHub', url: 'https://github.com/catacisneros' },
   { name: 'Website', url: 'https://catacisneros.github.io' },
 ];
