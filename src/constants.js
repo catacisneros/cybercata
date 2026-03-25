@@ -1,7 +1,7 @@
 // Profile information
 export const PROFILE = {
   username: 'CyberCata',
-  subtitle: 'Ciberseguridad, hacking y redes',
+  subtitle: 'Hacking, redes y ciberseguridad',
   socialProof: [
     '+70k aprendiendo ciberseguridad conmigo',
   ],
