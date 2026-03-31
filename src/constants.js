@@ -3,7 +3,7 @@ export const PROFILE = {
   username: 'CyberCata',
   subtitle: 'Hacking, redes y ciberseguridad',
   socialProof: [
-    '+70k aprendiendo ciberseguridad conmigo',
+    '+80k aprendiendo ciberseguridad conmigo',
   ],
   socialCta: 'Encuéntrame aquí',
   image: `${import.meta.env.BASE_URL}Cata_Pic.JPG`,
@@ -24,15 +24,14 @@ export const SPOKEO_AFFILIATE_URL = "https://www.spokeo.com/people-search?g=name
 export const VPN_AFFILIATE_URL = "https://go.nordvpn.net/aff_c?offer_id=612&aff_id=138174&url_id=14830";
 export const PASSWORD_MANAGER_AFFILIATE_URL = "https://go.nordpass.io/aff_c?offer_id=488&aff_id=138174&url_id=9356";
 
-// Link cards (icon + title + subtitle)
+// Acordeón de afiliados (Spokeo + NordVPN): textos en español
+export const AFFILIATE_DROPDOWN = {
+  title: 'Apoya mi canal',
+  subtitle: 'Protégete en línea',
+};
+
+// Solo enlaces afiliados (Nord + Spokeo) — van dentro del desplegable
 export const AFFILIATE_LINKS = [
-  {
-    platform: 'Discord',
-    icon: 'FaDiscord',
-    title: 'Hazte parte de la comunidad',
-    subtitle: 'Accede a las guías digitales, recursos exclusivos y conecta con la comunidad',
-    url: 'https://discord.gg/V3C3CC9b',
-  },
   {
     platform: 'Spokeo',
     logo: `${import.meta.env.BASE_URL}touch-icon_512.6eb08158.png`,
@@ -47,6 +46,17 @@ export const AFFILIATE_LINKS = [
     subtitle: 'Protege tu vida digital, evita las ciber amenazas',
     url: VPN_AFFILIATE_URL,
   },
+];
+
+// Resto de tarjetas (sin el acordeón de afiliados)
+export const MAIN_LINK_CARDS = [
+  {
+    platform: 'Discord',
+    icon: 'FaDiscord',
+    title: 'Hazte parte de la comunidad',
+    subtitle: 'Accede a las guías digitales, recursos exclusivos y conecta con la comunidad',
+    url: 'https://discord.gg/V3C3CC9b',
+  },
   {
     platform: 'Cybersecurity Portfolio',
     icon: 'FaGlobe',
@@ -54,7 +64,6 @@ export const AFFILIATE_LINKS = [
     subtitle: 'My projects, experience, certifications, etc.',
     url: 'https://catacisneros.github.io',
   },
-
 ];
 
 // Footer text (add as many lines as you want)

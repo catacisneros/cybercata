@@ -109,6 +109,100 @@
   gap: 1rem;
 }
 
+/* Acordeón: solo Spokeo + NordVPN */
+.affiliate-accordion {
+  width: 100%;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(0, 212, 255, 0.08);
+  overflow: hidden;
+}
+
+.affiliate-accordion-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  min-height: 64px;
+  transition: background 0.2s ease;
+}
+
+.affiliate-accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.affiliate-accordion-summary::marker {
+  content: '';
+}
+
+.affiliate-accordion-summary:hover {
+  background: rgba(0, 212, 255, 0.12);
+}
+
+.affiliate-accordion-summary-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.15rem;
+}
+
+.affiliate-accordion-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #00d4ff;
+  line-height: 1.25;
+}
+
+.affiliate-accordion-subtitle {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.3;
+}
+
+.affiliate-accordion-chevron {
+  flex-shrink: 0;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid #00d4ff;
+  border-bottom: 2px solid #00d4ff;
+  transform: rotate(45deg);
+  margin-top: -0.2rem;
+  transition: transform 0.2s ease;
+}
+
+.affiliate-accordion[open] .affiliate-accordion-chevron {
+  transform: rotate(225deg);
+  margin-top: 0.15rem;
+}
+
+.affiliate-accordion-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+  .affiliate-accordion-summary {
+    padding: 1.25rem 1.5rem;
+    min-height: 72px;
+  }
+
+  .affiliate-accordion-title {
+    font-size: 1.25rem;
+  }
+
+  .affiliate-accordion-subtitle {
+    font-size: 0.9375rem;
+  }
+}
+
 .affiliate-link-button {
   display: flex;
   align-items: center;
