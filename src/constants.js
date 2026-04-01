@@ -23,15 +23,22 @@ export const SOCIAL_LINKS = [
 export const SPOKEO_AFFILIATE_URL = "https://www.spokeo.com/people-search?g=name_landing_1_A3498442389";
 export const VPN_AFFILIATE_URL = "https://go.nordvpn.net/aff_c?offer_id=612&aff_id=138174&url_id=14830";
 export const PASSWORD_MANAGER_AFFILIATE_URL = "https://go.nordpass.io/aff_c?offer_id=488&aff_id=138174&url_id=9356";
+/** LabEx (Awin) — click + impression URLs from advertiser snippet */
+export const LABEX_AFFILIATE_URL =
+  'https://www.awin1.com/cread.php?s=4191489&v=64434&q=546877&r=2828572';
+export const LABEX_BANNER_URL =
+  'https://www.awin1.com/cshow.php?s=4191489&v=64434&q=546877&r=2828572';
 
-// Acordeón de afiliados (Spokeo + NordVPN): textos en español
-export const AFFILIATE_DROPDOWN = {
-  title: 'Apoya mi canal',
-  subtitle: 'Protégete en línea',
-};
-
-// Solo enlaces afiliados (Nord + Spokeo) — van dentro del desplegable
+// Link cards (icon + title + subtitle)
 export const AFFILIATE_LINKS = [
+  {
+    platform: 'Discord',
+    icon: 'FaDiscord',
+    title: 'Hazte parte de la comunidad',
+    subtitle: 'Accede a las guías digitales, recursos exclusivos y conecta con la comunidad',
+    url: 'https://discord.gg/V3C3CC9b',
+  },
+
   {
     platform: 'Spokeo',
     logo: `${import.meta.env.BASE_URL}touch-icon_512.6eb08158.png`,
@@ -46,16 +53,20 @@ export const AFFILIATE_LINKS = [
     subtitle: 'Protege tu vida digital, evita las ciber amenazas',
     url: VPN_AFFILIATE_URL,
   },
-];
-
-// Resto de tarjetas (sin el acordeón de afiliados)
-export const MAIN_LINK_CARDS = [
   {
-    platform: 'Discord',
-    icon: 'FaDiscord',
-    title: 'Hazte parte de la comunidad',
-    subtitle: 'Accede a las guías digitales, recursos exclusivos y conecta con la comunidad',
-    url: 'https://discord.gg/V3C3CC9b',
+    platform: 'NordPass',
+    logo: `${import.meta.env.BASE_URL}NordPass_Logo_RGB_Secondary_White.png`,
+    title: 'Consigue NordPass',
+    subtitle: 'Protege tus contraseñas, evita las ciber amenazas',
+    url: PASSWORD_MANAGER_AFFILIATE_URL,
+  },
+  {
+    platform: 'LabEx',
+    logo: LABEX_BANNER_URL,
+    title: 'LabEx',
+    subtitle: 'Laboratorios prácticos para aprender Linux y desarrollo',
+    url: LABEX_AFFILIATE_URL,
+    rel: 'noopener noreferrer sponsored',
   },
   {
     platform: 'Cybersecurity Portfolio',
@@ -64,6 +75,7 @@ export const MAIN_LINK_CARDS = [
     subtitle: 'My projects, experience, certifications, etc.',
     url: 'https://catacisneros.github.io',
   },
+
 ];
 
 // Footer text (add as many lines as you want)

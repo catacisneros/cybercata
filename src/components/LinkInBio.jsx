@@ -1,55 +1,6 @@
 import { FaTiktok, FaInstagram, FaLinkedin, FaGithub, FaYoutube, FaSearch, FaShieldAlt, FaLock, FaGlobe, FaDiscord } from 'react-icons/fa'
-import { PROFILE, SOCIAL_LINKS, AFFILIATE_LINKS, AFFILIATE_DROPDOWN, MAIN_LINK_CARDS, FOOTER_LINES } from '../constants'
+import { PROFILE, SOCIAL_LINKS, AFFILIATE_LINKS, FOOTER_LINES } from '../constants'
 import './LinkInBio.css'
-
-function renderLinkCard(link, key, buttonIconMap) {
-  const IconComponent = buttonIconMap[link.icon]
-  const hasUrl = typeof link.url === 'string' && link.url.trim() !== ''
-
-  const buttonInner = (
-    <>
-      <div className={`button-icon${link.logo ? ' button-icon--logo' : ''}`}>
-        {link.logo ? (
-          <img src={link.logo} alt="" className="button-logo" />
-        ) : IconComponent ? (
-          <IconComponent />
-        ) : null}
-      </div>
-      <div className="button-content">
-        <div className="button-title">{link.title}</div>
-        {link.subtitle && (
-          <div className="button-subtitle">{link.subtitle}</div>
-        )}
-      </div>
-    </>
-  )
-
-  if (hasUrl) {
-    return (
-      <a
-        key={key}
-        href={link.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="affiliate-link-button"
-        data-platform={link.platform}
-      >
-        {buttonInner}
-      </a>
-    )
-  }
-
-  return (
-    <div
-      key={key}
-      className="affiliate-link-button"
-      data-platform={link.platform}
-      aria-disabled="true"
-    >
-      {buttonInner}
-    </div>
-  )
-}
 
 function LinkInBio() {
   // Mapeo de iconos para los iconos pequeños
@@ -129,20 +80,55 @@ function LinkInBio() {
       </div>
 
       <div className="links-section">
-        {MAIN_LINK_CARDS.map((link, index) => renderLinkCard(link, index, buttonIconMap))}
+        {AFFILIATE_LINKS.map((link, index) => {
+          const IconComponent = buttonIconMap[link.icon]
+          const hasUrl = typeof link.url === 'string' && link.url.trim() !== ''
 
-        <details className="affiliate-accordion">
-          <summary className="affiliate-accordion-summary">
-            <span className="affiliate-accordion-summary-text">
-              <span className="affiliate-accordion-title">{AFFILIATE_DROPDOWN.title}</span>
-              <span className="affiliate-accordion-subtitle">{AFFILIATE_DROPDOWN.subtitle}</span>
-            </span>
-            <span className="affiliate-accordion-chevron" aria-hidden="true" />
-          </summary>
-          <div className="affiliate-accordion-panel">
-            {AFFILIATE_LINKS.map((link, index) => renderLinkCard(link, `affiliate-${index}`, buttonIconMap))}
-          </div>
-        </details>
+          const buttonInner = (
+            <>
+              <div className={`button-icon${link.logo ? ' button-icon--logo' : ''}`}>
+                {link.logo ? (
+                  <img src={link.logo} alt="" className="button-logo" />
+                ) : IconComponent ? (
+                  <IconComponent />
+                ) : null}
+              </div>
+              <div className="button-content">
+                <div className="button-title">{link.title}</div>
+                {link.subtitle && (
+                  <div className="button-subtitle">{link.subtitle}</div>
+                )}
+              </div>
+            </>
+          )
+
+          if (hasUrl) {
+            return (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel={link.rel ?? 'noopener noreferrer'}
+                className="affiliate-link-button"
+                data-platform={link.platform}
+              >
+                {buttonInner}
+              </a>
+            )
+          }
+
+          // Si la URL está en blanco, mantenemos el estilo pero como tarjeta no clickeable.
+          return (
+            <div
+              key={index}
+              className="affiliate-link-button"
+              data-platform={link.platform}
+              aria-disabled="true"
+            >
+              {buttonInner}
+            </div>
+          )
+        })}
       </div>
 
       {FOOTER_LINES && FOOTER_LINES.some(line => line.trim()) && (
