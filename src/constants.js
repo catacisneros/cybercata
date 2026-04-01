@@ -61,13 +61,6 @@ export const AFFILIATE_LINKS = [
     url: LABEX_AFFILIATE_URL,
     rel: 'noopener noreferrer sponsored',
   },
-  {
-    platform: 'Cybersecurity Portfolio',
-    icon: 'FaGlobe',
-    title: 'My Portfolio',
-    subtitle: 'My projects, experience, certifications, etc.',
-    url: 'https://catacisneros.github.io',
-  },
 
 ];
 
