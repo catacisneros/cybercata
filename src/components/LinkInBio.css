@@ -215,7 +215,9 @@
   transition: all 0.2s ease;
   cursor: pointer;
   width: 100%;
-  min-height: 64px;
+  box-sizing: border-box;
+  /* Same visual height for all cards; grows only if title exceeds two lines */
+  min-height: 9rem;
 }
 
 .affiliate-link-button:hover {
@@ -274,20 +276,30 @@
 
 .button-content {
   flex: 1;
+  min-width: 0;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .button-title {
   font-size: 1.125rem;
   font-weight: 600;
+  line-height: 1.25;
   color: #00d4ff;
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.35rem;
+  /* Two-line band so short titles line up with longer / wrapped titles */
+  min-height: calc(2 * 1.25 * 1em);
 }
 
 .button-subtitle {
   font-size: 0.875rem;
+  line-height: 1.45;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
+  /* Reserve three lines so short subtitles align with long ones */
+  min-height: calc(3 * 1.45 * 1em);
 }
 
 @media (min-width: 768px) {
@@ -301,7 +313,7 @@
 
   .affiliate-link-button {
     padding: 1.25rem 1.5rem;
-    min-height: 72px;
+    min-height: 9.5rem;
   }
 
   .button-title {
