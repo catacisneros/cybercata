@@ -54,13 +54,6 @@ export const AFFILIATE_LINKS = [
     url: VPN_AFFILIATE_URL,
   },
   {
-    platform: 'NordPass',
-    logo: `${import.meta.env.BASE_URL}NordPass_Logo_RGB_Secondary_White.png`,
-    title: 'Consigue NordPass',
-    subtitle: 'Protege tus contraseñas, evita las ciber amenazas',
-    url: PASSWORD_MANAGER_AFFILIATE_URL,
-  },
-  {
     platform: 'LabEx',
     logo: LABEX_BANNER_URL,
     title: 'LabEx',
