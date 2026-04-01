@@ -86,11 +86,11 @@ function LinkInBio() {
 
           const buttonInner = (
             <>
-              <div className={`button-icon${link.logo ? ' button-icon--logo' : ''}`}>
+              <div className="affiliate-link-media" aria-hidden="true">
                 {link.logo ? (
-                  <img src={link.logo} alt="" className="button-logo" />
+                  <img src={link.logo} alt="" className="affiliate-link-media-img" />
                 ) : IconComponent ? (
-                  <IconComponent />
+                  <IconComponent className="affiliate-link-media-icon" />
                 ) : null}
               </div>
               <div className="button-content">

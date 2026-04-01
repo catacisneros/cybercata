@@ -203,21 +203,22 @@
   }
 }
 
+/* Link cards: media-object — square image column + title / subtitle (wireframe layout) */
 .affiliate-link-button {
+  --link-media: 5.25rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.25rem;
+  padding: 0.875rem 1.125rem;
   background: rgba(0, 212, 255, 0.15);
   border: 1px solid rgba(0, 212, 255, 0.3);
   border-radius: 12px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
   width: 100%;
   box-sizing: border-box;
-  /* Same visual height for all cards; grows only if title exceeds two lines */
-  min-height: 9rem;
+  min-height: calc(var(--link-media) + 1.75rem);
 }
 
 .affiliate-link-button:hover {
@@ -226,61 +227,47 @@
   transform: translateY(-2px);
 }
 
-.button-icon {
+.affiliate-link-media {
+  flex: 0 0 var(--link-media);
+  width: var(--link-media);
+  height: var(--link-media);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(0, 212, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: #00d4ff;
-  font-size: 1.5rem;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
-/* NordVPN logo un poco más grande */
-.button-icon--logo {
-  width: 52px;
-  height: 52px;
-}
-
-.button-logo {
-  max-width: 100%;
-  max-height: 100%;
+.affiliate-link-media-img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  padding: 0.4rem;
+  box-sizing: border-box;
 }
 
-/* LabEx: banner Awin (ancho) en lugar de logo cuadrado */
-.affiliate-link-button[data-platform="LabEx"] .button-icon--logo {
-  width: auto;
-  min-width: 100px;
-  max-width: min(200px, 38vw);
-  height: auto;
-  min-height: 36px;
-  max-height: 52px;
+.affiliate-link-media-icon {
+  font-size: 1.75rem;
+  color: #00d4ff;
+  flex-shrink: 0;
 }
 
-.affiliate-link-button[data-platform="LabEx"] .button-logo {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 52px;
-  object-fit: contain;
-}
-
-/* Spokeo icon un poco más chiquito */
-.affiliate-link-button[data-platform="Spokeo"] .button-icon {
-  width: 32px;
-  height: 32px;
-  font-size: 1.15rem;
+.affiliate-link-button[data-platform="Spokeo"] .affiliate-link-media-icon {
+  font-size: 1.4rem;
 }
 
 .button-content {
   flex: 1;
   min-width: 0;
+  align-self: stretch;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.35rem;
 }
 
 .button-title {
@@ -288,9 +275,12 @@
   font-weight: 600;
   line-height: 1.25;
   color: #00d4ff;
-  margin: 0 0 0.35rem;
-  /* Two-line band so short titles line up with longer / wrapped titles */
-  min-height: calc(2 * 1.25 * 1em);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
 }
 
 .button-subtitle {
@@ -298,8 +288,12 @@
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
-  /* Reserve three lines so short subtitles align with long ones */
-  min-height: calc(3 * 1.45 * 1em);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -312,8 +306,14 @@
   }
 
   .affiliate-link-button {
-    padding: 1.25rem 1.5rem;
-    min-height: 9.5rem;
+    --link-media: 5.75rem;
+    gap: 1.125rem;
+    padding: 1rem 1.35rem;
+    min-height: calc(var(--link-media) + 2rem);
+  }
+
+  .affiliate-link-media-icon {
+    font-size: 1.9rem;
   }
 
   .button-title {
