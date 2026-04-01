@@ -36,7 +36,7 @@ export const AFFILIATE_LINKS = [
     icon: 'FaDiscord',
     title: 'Hazte parte de la comunidad',
     subtitle: 'Accede a recursos exclusivos y conecta con la comunidad',
-    url: 'https://discord.gg/V3C3CC9b',
+    url: 'https://discord.gg/pfvmrVCFx',
   },
 
   {
