@@ -11,7 +11,7 @@ export const PROFILE = {
 
 // Original social media links (for icons below username)
 export const SOCIAL_LINKS = [
-  { name: 'Discord', url: 'https://discord.gg/V3C3CC9b' },
+  { name: 'Discord', url: 'https://discord.gg/9Uw4J7CMVD' },
   { name: 'TikTok', url: 'https://www.tiktok.com/@catacisneros' },
   { name: 'Instagram', url: 'https://www.instagram.com/cyber.cata/' },
   { name: 'YouTube', url: 'https://www.youtube.com/@cybercata' },
@@ -36,7 +36,7 @@ export const AFFILIATE_LINKS = [
     icon: 'FaDiscord',
     title: 'Hazte parte de la comunidad',
     subtitle: 'Accede a recursos exclusivos y conecta con la comunidad',
-    url: 'https://discord.gg/pfvmrVCFx',
+    url: 'https://discord.gg/9Uw4J7CMVD',
   },
 
   {
