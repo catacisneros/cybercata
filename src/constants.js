@@ -17,6 +17,7 @@ export const SOCIAL_LINKS = [
   { name: 'YouTube', url: 'https://www.youtube.com/@cybercata' },
   { name: 'GitHub', url: 'https://github.com/catacisneros' },
   { name: 'Website', url: 'https://catacisneros.github.io' },
+  { name: 'Email', url: 'mailto:cybercatahq@gmail.com' },
 ];
 
 // Original affiliate URLs

@@ -1,4 +1,4 @@
-import { FaTiktok, FaInstagram, FaLinkedin, FaGithub, FaYoutube, FaSearch, FaShieldAlt, FaLock, FaGlobe, FaDiscord } from 'react-icons/fa'
+import { FaTiktok, FaInstagram, FaLinkedin, FaGithub, FaYoutube, FaSearch, FaShieldAlt, FaLock, FaGlobe, FaDiscord, FaEnvelope } from 'react-icons/fa'
 import { PROFILE, SOCIAL_LINKS, AFFILIATE_LINKS, FOOTER_LINES } from '../constants'
 import './LinkInBio.css'
 
@@ -12,6 +12,7 @@ function LinkInBio() {
     Instagram: FaInstagram,
     Website: FaGlobe,
     Discord: FaDiscord,
+    Email: FaEnvelope,
   }
 
   // Mapeo de iconos para los botones de productos
@@ -50,16 +51,21 @@ function LinkInBio() {
             const IconComponent = iconMap[social.name]
             if (!IconComponent) return null
             const hasUrl = typeof social.url === 'string' && social.url.trim() !== ''
+            const isMailto = hasUrl && social.url.trim().toLowerCase().startsWith('mailto:')
             const iconEl = <IconComponent />
             if (hasUrl) {
               return (
                 <a
                   key={index}
                   href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={isMailto ? undefined : '_blank'}
+                  rel={isMailto ? undefined : 'noopener noreferrer'}
                   className="social-icon-link"
-                  aria-label={social.name}
+                  aria-label={
+                    isMailto
+                      ? `Enviar correo a ${social.url.replace(/^mailto:/i, '').split('?')[0]}`
+                      : social.name
+                  }
                 >
                   {iconEl}
                 </a>
