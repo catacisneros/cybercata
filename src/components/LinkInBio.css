@@ -109,6 +109,104 @@
   gap: 1rem;
 }
 
+/* Mailchimp embed — aligned with link cards */
+.mailchimp-embed-shell {
+  width: 100%;
+}
+
+.mailchimp-embed-shell #mc_embed_signup {
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  padding: 1rem 1.125rem;
+  font: 14px Helvetica, Arial, sans-serif;
+  clear: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mailchimp-embed-shell #mc_embed_signup h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #00d4ff;
+  line-height: 1.25;
+}
+
+.mailchimp-embed-shell #mc_embed_signup .indicates-required {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0.75rem;
+}
+
+.mailchimp-embed-shell #mc_embed_signup .mc-field-group {
+  margin-bottom: 0.75rem;
+}
+
+.mailchimp-embed-shell #mc_embed_signup label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.875rem;
+}
+
+.mailchimp-embed-shell #mc_embed_signup input[type='email'],
+.mailchimp-embed-shell #mc_embed_signup input[type='text'] {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  background: rgba(0, 0, 0, 0.22);
+  color: #fff;
+  font-size: 0.9375rem;
+}
+
+.mailchimp-embed-shell #mc_embed_signup input[type='email']:focus,
+.mailchimp-embed-shell #mc_embed_signup input[type='text']:focus {
+  outline: none;
+  border-color: #00d4ff;
+}
+
+.mailchimp-embed-shell #mc_embed_signup .button {
+  /* Reset Mailchimp #mc-embedded-subscribe { margin: 1em 0 1em 5%; } and center label */
+  margin: 0.25rem 0 0 0;
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  color: #0a0a0f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-indent: 0;
+  line-height: 1.25;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.mailchimp-embed-shell #mc_embed_signup .button:hover {
+  filter: brightness(1.08);
+}
+
+.mailchimp-embed-shell #mc_embed_signup .optionalParent .foot {
+  text-align: center;
+}
+
+.mailchimp-embed-shell #mc_embed_signup .optionalParent .foot p {
+  margin-top: 0.75rem;
+}
+
+.mailchimp-embed-shell #mc_embed_signup .optionalParent .foot img {
+  opacity: 0.85;
+}
+
 /* Acordeón: solo Spokeo + NordVPN */
 .affiliate-accordion {
   width: 100%;

@@ -3,7 +3,7 @@ export const PROFILE = {
   username: 'CyberCata',
   subtitle: 'Hacking, redes y ciberseguridad',
   socialProof: [
-    '+80k aprendiendo ciberseguridad conmigo',
+    '+100k aprendiendo ciberseguridad conmigo',
   ],
   socialCta: 'Encuéntrame aquí',
   image: `${import.meta.env.BASE_URL}Cata_Pic.JPG`,

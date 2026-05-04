@@ -1,5 +1,6 @@
 import { FaTiktok, FaInstagram, FaLinkedin, FaGithub, FaYoutube, FaSearch, FaShieldAlt, FaLock, FaGlobe, FaDiscord, FaEnvelope } from 'react-icons/fa'
 import { PROFILE, SOCIAL_LINKS, AFFILIATE_LINKS, FOOTER_LINES } from '../constants'
+import MailchimpEmbed from './MailchimpEmbed'
 import './LinkInBio.css'
 
 function LinkInBio() {
@@ -86,6 +87,7 @@ function LinkInBio() {
       </div>
 
       <div className="links-section">
+        <MailchimpEmbed />
         {AFFILIATE_LINKS.map((link, index) => {
           const IconComponent = buttonIconMap[link.icon]
           const hasUrl = typeof link.url === 'string' && link.url.trim() !== ''
@@ -110,6 +112,8 @@ function LinkInBio() {
 
           if (hasUrl) {
             return (
+              // rel is per-link (e.g. sponsored) or a safe default; rule needs a static rel string
+              // eslint-disable-next-line react/jsx-no-target-blank
               <a
                 key={index}
                 href={link.url}
